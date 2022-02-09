@@ -46,6 +46,10 @@ logger = get_logger(__name__)
 class Experiment:
     """Experiments are the main user interface in SmartSim.
 
+    .. warning::
+
+        Testing doc build
+
     Experiments can create instances to launch called ``Model``
     and ``Ensemble``. Through the ``Experiment`` interface, users
     can programmatically create, configure, start, stop, poll and
