@@ -1,5 +1,7 @@
 name: deploy_dev_docs
 
+# Update develop branch documentation on push
+# All other branches require manual builds via workflow dispatch
 on:
   push:
     branches:
@@ -24,7 +26,7 @@ jobs:
 
       - name: Copy over other doc versions from doc branch
         run: |
-          rm -rf doc-branch/docs/develop/
+          rm -rf doc-branch/docs/${{ github.ref_name }}
           mkdir -p ./docs
           cp -r doc-branch/docs/* ./docs/
           rm -rf doc-branch
@@ -37,7 +39,7 @@ jobs:
           git add -A
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git commit -m "Update develop documentation"
+          git commit -m "Update ${{ github.ref_name }} documentation"
 
       - uses: ad-m/github-push-action@v0.6.0
         with:
