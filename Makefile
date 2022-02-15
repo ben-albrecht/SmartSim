@@ -15,6 +15,11 @@ ifndef COV_FILE
 export COV_FILE="${PWD}/tests/test_configs/cov/local_cov.cfg"
 endif
 
+# Directory within docs/ to build docs into for make docks
+ifndef DOCS_BUILD_DIR
+export DOCS_BUILD_DIR="develop"
+endif
+
 SHELL:=/bin/bash
 
 # help: help                           - display this makefile's help information
@@ -93,11 +98,11 @@ docs:
 # help: docks                          - generate project documentation with docker
 .PHONY: docks
 docks:
-	@rm -rf docs/develop
+	@rm -rf docs/${DOCS_BUILD_DIR}
 	@mkdir -p docs
-	@docker compose build --progress=plain docs-dev
+	@docker compose build --progress=plain docs-dev --no-cache
 	@docker create -ti --name devdocs smartsim-docs:dev-latest
-	@docker cp devdocs:/usr/local/src/SmartSim/doc/_build/html/ ./docs/develop
+	@docker cp devdocs:/usr/local/src/SmartSim/doc/_build/html/ ./docs/${DOCS_BUILD_DIR}
 	@docker container rm devdocs
 	@cp -r .docs_static/. ./docs/
 

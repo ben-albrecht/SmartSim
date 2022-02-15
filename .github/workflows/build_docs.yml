@@ -32,7 +32,7 @@ jobs:
           rm -rf doc-branch
 
       - name: build documentation with docker
-        run: make docks
+        run: make docks # builds in docs/develop
 
       - name: Commit files
         run: |
