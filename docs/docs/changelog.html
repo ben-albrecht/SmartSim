@@ -1,0 +1,531 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Changelog &#8212; SmartSim 0.3.2+dev.392cff4 documentation</title>
+    
+  <link href="_static/css/theme.css" rel="stylesheet">
+  <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-book-theme.css?digest=84ace793992934648b4de8eed757e5a2" />
+    
+  <link rel="preload" as="script" href="_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="_static/sphinx-book-theme.9d8b4a8b9bb19db25eeaddc40d639ba2.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Developer" href="developer.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<div class="col-12 col-md-3 bd-sidebar site-navigation " id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+      
+      
+      <h1 class="site-logo" id="site-title">SmartSim 0.3.2+dev.392cff4 documentation</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Overview of SmartSim
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="overview.html">
+   Introduction
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="installation.html">
+   Installation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="community.html">
+   Community
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Tutorials
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="tutorials/01_getting_started/01_getting_started.html">
+   Getting Started
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="tutorials/02_using_clients.html">
+   Using SmartRedis Clients
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="tutorials/03_lattice_boltz_analysis.html">
+   Online Analysis
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="tutorials/04_inference.html">
+   Online Inference
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="tutorials/05_training.html">
+   Online training with SmartSim
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="tutorials/06_starting_ray/06_starting_ray_builtin.html">
+   Setting up a Ray Cluster
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  SmartSim
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="experiment.html">
+   Experiments
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="orchestrator.html">
+   Orchestrator
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="launchers.html">
+   Launchers
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="api/smartsim_api.html">
+   SmartSim API
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  SmartRedis
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="smartredis.html">
+   SmartRedis
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="sr_data_structures.html">
+   Data Structures
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="sr_runtime.html">
+   Runtime Requirements
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="api/smartredis_api.html">
+   SmartRedis API
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Reference
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="code_of_conduct.html">
+   Code of Conduct
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="developer.html">
+   Developer
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Changelog
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<!-- This is an invisible pixel that we watch to see if we've scrolled. -->
+<div class="sbt-scroll-pixel-helper"></div>
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            <div class="topbar-left">
+                
+                <label class="nav-toggle-button" for="__navigation">
+                    <div class="visually-hidden">Toggle navigation</div>
+                    <i class="fas fa-bars"></i>
+                </label>
+                
+            </div>
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/changelog.rst.txt"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.rst</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#smartsim">
+   SmartSim
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id1">
+     0.3.2
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id2">
+     0.3.1
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id3">
+     0.3.0
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#smartredis">
+   SmartRedis
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id4">
+     0.2.0
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id6">
+     0.1.1
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id7">
+     0.1.0
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Changelog</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#smartsim">
+   SmartSim
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id1">
+     0.3.2
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id2">
+     0.3.1
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id3">
+     0.3.0
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#smartredis">
+   SmartRedis
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id4">
+     0.2.0
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id6">
+     0.1.1
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id7">
+     0.1.0
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <section id="changelog">
+<h1>Changelog<a class="headerlink" href="#changelog" title="Permalink to this headline">¶</a></h1>
+<p>Listed here are the changes between each release of SmartSim
+and SmartRedis.</p>
+<p>Jump to <a class="reference internal" href="#id4"><span class="std std-ref">SmartRedis Changelog</span></a></p>
+<section id="smartsim">
+<h2>SmartSim<a class="headerlink" href="#smartsim" title="Permalink to this headline">¶</a></h2>
+<section id="id1">
+<h3>0.3.2<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<p>Released on August 10, 2021</p>
+<p>Description:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Upgraded RedisAI backend to 1.2.3 (<a class="reference external" href="https://github.com/CrayLabs/SmartSim/pull/69">SmartSim-PR69</a>)</p></li>
+<li><p>PyTorch 1.7.1, TF 2.4.2, and ONNX 1.6-7 (<a class="reference external" href="https://github.com/CrayLabs/SmartSim/pull/69">SmartSim-PR69</a>)</p></li>
+<li><p>LSF launcher for IBM machines (<a class="reference external" href="https://github.com/CrayLabs/SmartSim/pull/62">SmartSim-PR62</a>)</p></li>
+<li><p>Improved code coverage by adding more unit tests (<a class="reference external" href="https://github.com/CrayLabs/SmartSim/pull/53">SmartSim-PR53</a>)</p></li>
+<li><p>Orchestrator methods to get address and check status (<a class="reference external" href="https://github.com/CrayLabs/SmartSim/pull/60">SmartSim-PR60</a>)</p></li>
+<li><p>Added Manifest object that tracks deployables in Experiments (<a class="reference external" href="https://github.com/CrayLabs/SmartSim/pull/61">SmartSim-PR61</a>)</p></li>
+<li><p>Bug fixes (<a class="reference external" href="https://github.com/CrayLabs/SmartSim/pull/52">SmartSim-PR52</a>) (<a class="reference external" href="https://github.com/CrayLabs/SmartSim/pull/58">SmartSim-PR58</a>) (<a class="reference external" href="https://github.com/CrayLabs/SmartSim/pull/67">SmartSim-PR67</a>) (<a class="reference external" href="https://github.com/CrayLabs/SmartSim/pull/73">SmartSim-PR73</a>)</p></li>
+<li><p>Updated documentation and examples (<a class="reference external" href="https://github.com/CrayLabs/SmartSim/pull/51">SmartSim-PR51</a>) (<a class="reference external" href="https://github.com/CrayLabs/SmartSim/pull/57">SmartSim-PR57</a>) (<a class="reference external" href="https://github.com/CrayLabs/SmartSim/pull/71">SmartSim-PR71</a>)</p></li>
+<li><p>Improved IP address aquisition (<a class="reference external" href="https://github.com/CrayLabs/SmartSim/pull/72">SmartSim-PR72</a>)</p></li>
+<li><p>Binding database to network interfaces</p></li>
+</ul>
+</div></blockquote>
+</section>
+<section id="id2">
+<h3>0.3.1<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<p>Released on May 5, 2021</p>
+<p>Description:
+This release was dedicated to making the install process
+easier. SmartSim can be installed from PyPi now and the
+<code class="docutils literal notranslate"><span class="pre">smart</span></code> cli tool makes installing the machine learning
+runtimes much easier.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Pip install (<a class="reference external" href="https://github.com/CrayLabs/SmartSim/pull/42">SmartSim-PR42</a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">smart</span></code> cli tool for ML backends (<a class="reference external" href="https://github.com/CrayLabs/SmartSim/pull/42">SmartSim-PR42</a>)</p></li>
+<li><p>Build Documentation for updated install (<a class="reference external" href="https://github.com/CrayLabs/SmartSim/pull/43">SmartSim-PR43</a>)</p></li>
+<li><p>Migrate from Jenkins to Github Actions CI (<a class="reference external" href="https://github.com/CrayLabs/SmartSim/pull/42">SmartSim-PR42</a>)</p></li>
+<li><p>Bug fix for setup.cfg (<a class="reference external" href="https://github.com/CrayLabs/SmartSim/pull/35">SmartSim-PR35</a>)</p></li>
+</ul>
+</div></blockquote>
+</section>
+<section id="id3">
+<h3>0.3.0<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<p>Released on April 1, 2021</p>
+<p>Description:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>initial 0.3.0 (first public) release of SmartSim</p></li>
+</ul>
+</div></blockquote>
+</section>
+</section>
+<hr class="docutils" />
+<section id="smartredis">
+<h2>SmartRedis<a class="headerlink" href="#smartredis" title="Permalink to this headline">¶</a></h2>
+<section id="id4">
+<span id="id5"></span><h3>0.2.0<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
+<p>Release on August, 5, 2021</p>
+<p>Description</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Improved tensor memory management in the Python client (<a class="reference external" href="https://github.com/CrayLabs/SmartRedis/pull/70">PR70</a>)</p></li>
+<li><p>Improved metadata serialization and removed protobuf dependency (<a class="reference external" href="https://github.com/CrayLabs/SmartRedis/pull/61">PR61</a>)</p></li>
+<li><p>Added unit testing infrastructure for the C++ client (<a class="reference external" href="https://github.com/CrayLabs/SmartRedis/pull/96">PR96</a>)</p></li>
+<li><p>Improve command execution fault handling (<a class="reference external" href="https://github.com/CrayLabs/SmartRedis/pull/65">PR65</a>) (<a class="reference external" href="https://github.com/CrayLabs/SmartRedis/pull/97">PR97</a>) (<a class="reference external" href="https://github.com/CrayLabs/SmartRedis/pull/105">PR105</a>)</p></li>
+<li><p>Bug fixes (<a class="reference external" href="https://github.com/CrayLabs/SmartRedis/pull/52">PR52</a>) (<a class="reference external" href="https://github.com/CrayLabs/SmartRedis/pull/72">PR72</a>) (<a class="reference external" href="https://github.com/CrayLabs/SmartRedis/pull/76">PR76</a>) (<a class="reference external" href="https://github.com/CrayLabs/SmartRedis/pull/84">PR84</a>)</p></li>
+<li><p>Added copy, rename, and delete tensor and DataSet commands in the Python client (<a class="reference external" href="https://github.com/CrayLabs/SmartRedis/pull/66">PR66</a>)</p></li>
+<li><p>Upgrade to RedisAI 1.2.3 (<a class="reference external" href="https://github.com/CrayLabs/SmartRedis/pull/101">PR101</a>)</p></li>
+<li><p>Fortran and C interface improvements (<a class="reference external" href="https://github.com/CrayLabs/SmartRedis/pull/93">PR93</a>) (<a class="reference external" href="https://github.com/CrayLabs/SmartRedis/pull/94">PR94</a>) (<a class="reference external" href="https://github.com/CrayLabs/SmartRedis/pull/95">PR95</a>) (<a class="reference external" href="https://github.com/CrayLabs/SmartRedis/pull/99">PR99</a>)</p></li>
+<li><p>Add Redis INFO command execution to the Python client (<a class="reference external" href="https://github.com/CrayLabs/SmartRedis/pull/83">PR83</a>)</p></li>
+<li><p>Add Redis CLUSTER INFO command execution to the Python client (<a class="reference external" href="https://github.com/CrayLabs/SmartRedis/pull/105">PR105</a>)</p></li>
+</ul>
+</div></blockquote>
+</section>
+<section id="id6">
+<h3>0.1.1<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h3>
+<p>Released on May 5, 2021</p>
+<p>Description</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Compiled client library build and install update to remove environment variables (<a class="reference external" href="https://github.com/CrayLabs/SmartRedis/pull/47">PR47</a>)</p></li>
+<li><p>Pip install for Python client (<a class="reference external" href="https://github.com/CrayLabs/SmartRedis/pull/45">PR45</a>)</p></li>
+</ul>
+</div></blockquote>
+</section>
+<section id="id7">
+<h3>0.1.0<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h3>
+<p>Released on April 1, 2021</p>
+<p>Description</p>
+<ul class="simple">
+<li><p>Initial 0.1.0 release of SmartRedis</p></li>
+</ul>
+</section>
+</section>
+</section>
+
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="developer.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Developer</p>
+        </div>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By Cray Labs<br/>
+    
+        &copy; Copyright 2021-2022, Hewlett Packard Enterprise.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>
