@@ -427,7 +427,7 @@ class Controller:
         :return: list of tuples of (launcher_step, entity)
         :rtype: list of tuples
         """
-        # get SSDB, SSIN, SSOUT and add to entity run settings
+        # get SSDB, SSKEYIN, SSKEYOUT and add to entity run settings
         if not isinstance(entity, DBNode):
             self._prep_entity_client_env(entity)
 
