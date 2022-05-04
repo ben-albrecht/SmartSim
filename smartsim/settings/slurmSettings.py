@@ -31,7 +31,8 @@ from ..error import SSUnsupportedError
 
 class SrunSettings(RunSettings):
     def __init__(
-        self, exe, exe_args=None, run_args=None, env_vars=None, alloc=None, **kwargs
+        self, exe, exe_args=None, run_args=None, env_vars=None, alloc=None,
+        container=None, **kwargs
     ):
         """Initialize run parameters for a slurm job with ``srun``
 

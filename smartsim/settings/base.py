@@ -37,7 +37,8 @@ logger = get_logger(__name__)
 
 class RunSettings:
     def __init__(
-        self, exe, exe_args=None, run_command="", run_args=None, env_vars=None, **kwargs
+        self, exe, exe_args=None, run_command="", run_args=None, env_vars=None,
+        container=None, **kwargs
     ):
         """Run parameters for a ``Model``
 
@@ -68,6 +69,8 @@ class RunSettings:
         :type run_args: dict[str, str], optional
         :param env_vars: environment vars to launch job with, defaults to None
         :type env_vars: dict[str, str], optional
+        :param container: TODO, defaults to None
+        :type container: Container, optional
         """
         self.exe = [expand_exe_path(exe)]
         self.exe_args = self._set_exe_args(exe_args)
@@ -126,6 +129,10 @@ class RunSettings:
         :returns: launch binary e.g. mpiexec
         :type: str | None
         """
+        if container:
+            self._run_command.
+            # TODO
+
         if self._run_command:
             if is_valid_cmd(self._run_command):
                 # command is valid and will be expanded
