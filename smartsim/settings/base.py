@@ -69,13 +69,14 @@ class RunSettings:
         :type run_args: dict[str, str], optional
         :param env_vars: environment vars to launch job with, defaults to None
         :type env_vars: dict[str, str], optional
-        :param container: TODO, defaults to None
+        :param container: container type for workload (e.g. "singularity"), defaults to None
         :type container: Container, optional
         """
         self.exe = [expand_exe_path(exe)]
         self.exe_args = self._set_exe_args(exe_args)
         self.run_args = init_default({}, run_args, dict)
         self.env_vars = init_default({}, env_vars, dict)
+        self.container = container
         self._run_command = run_command
         self.in_batch = False
         self.colocated_db_settings = None
@@ -130,8 +131,9 @@ class RunSettings:
         :type: str | None
         """
         if container:
-            self._run_command.
             # TODO
+            # Modify ._run_command
+            self._run_command
 
         if self._run_command:
             if is_valid_cmd(self._run_command):
