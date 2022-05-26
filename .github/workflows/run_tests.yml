@@ -42,8 +42,18 @@ jobs:
           sudo apt-get install -y build-essential
           sudo apt-get install -y wget
 
-      - name: docker pull from ghcr
-        run: docker pull ghcr.io/craylabs/redisai:1.2.5-cpu-bionic-custom
+      - name: install singularity
+        run: |
+             sudo apt-get install -y \
+             libssl-dev \
+             uuid-dev \
+             libgpgme11-dev \
+             squashfs-tools \
+             libseccomp-dev \
+             pkg-config
+
+      - name: singularity pull from ghcr
+        run: singularity pull ghcr.io/craylabs/redisai:1.2.5-cpu-bionic-custom
 
       - name: Install GNU make for MacOS and set GITHUB_PATH
         if: "contains( matrix.os, 'macos' )"

@@ -5,6 +5,7 @@ from .lsfSettings import BsubBatchSettings, JsrunSettings
 from .mpirunSettings import MpirunSettings
 from .pbsSettings import QsubBatchSettings
 from .slurmSettings import SbatchSettings, SrunSettings
+from .containers import Container, Singularity
 
 __all__ = [
     "AprunSettings",
@@ -16,4 +17,6 @@ __all__ = [
     "RunSettings",
     "SbatchSettings",
     "SrunSettings",
+    "Container",
+    "Singularity",
 ]

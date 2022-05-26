@@ -130,18 +130,22 @@ class RunSettings:
         :returns: launch binary e.g. mpiexec
         :type: str | None
         """
-        if container:
-            # TODO
-            # Modify ._run_command
-            self._run_command
+        cmd = self._run_command
 
-        if self._run_command:
-            if is_valid_cmd(self._run_command):
+        if cmd:
+            if container:
+                # Append container commands to workload command
+                cmd = container._containerized_run_command(cmd)
+            print(cmd)
+            if is_valid_cmd(cmd):
                 # command is valid and will be expanded
-                return expand_exe_path(self._run_command)
+                return expand_exe_path(cmd)
             # command is not valid, so return it as is
             # it may be on the compute nodes but not local machine
-            return self._run_command
+            return cmd
+
+        # TODO: Do we need to return containerized_run_command even if cmd is empty?
+
         # run without run command
         return None
 

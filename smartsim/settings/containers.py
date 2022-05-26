@@ -13,12 +13,19 @@ class Container():
     '''
 
     def __init__(self, image, args='', bind_paths=None):
-        # TODO: validate types
+        # Validate types
+        if not isinstance(image, str):
+            raise TypeError('image must be a str')
+        elif not isinstance(args, (str, list)):
+            raise TypeError('args must be a str | list')
+        elif not isinstance(bind_paths, (str, list, dict)):
+            raise TypeError('bind_paths must be a str | list | dict')
+
         self.image = image
         self.args = args
         self.bind_paths = bind_paths
 
-    def _containerized_run_command(self, run_command):
+    def _containerized_run_command(self, run_command: str):
         '''Return modified run_command with container commands prepended.
 
         :param run_command: run command from a RunSettings class
@@ -42,7 +49,7 @@ class Singularity(Container):
         super().__init__(*args, **kwargs)
 
     def _containerized_run_command(self, run_command: str):
-        '''Return modified run_command with container commands prepended.
+        '''Return modified run_command with container commands appended.
 
         :param run_command: run command from a Settings class
         :type run_command: str
@@ -64,7 +71,7 @@ class Singularity(Container):
         elif isinstance(self.bind_paths, dict):
             paths = []
             for host_path,img_path in self.bind_paths.items():
-                if val:
+                if img_path:
                     paths.append(f'{host_path}={img_path}')
                 else:
                     paths.append(host_path)
@@ -73,22 +80,41 @@ class Singularity(Container):
             raise TypeError('self.bind_paths must be str | list | dict')
 
         # Construct containerized launch command
-        new_command = f'singularity {self.image} {self.args} --bind {self.bind_paths} {run_command}'
+        new_command = f'{run_command} singularity {self.image} {serialized_args} --bind {serialized_bind_paths}'
         return new_command
 
 
-# TODO test
 if __name__ == '__main__':
+
+    #
+    # args types
+    #
+
+    # args=str
     s = Singularity('image.sif', args='--nv', bind_paths='/foo/bar')
-    print(s._containerized_run_command('srun -n 16 myapp.py --verbose'))
-
+    print(s._containerized_run_command('srun -n 16'))
+    # singularity image.sif --nv --bind /foo/bar srun -n 16 myapp.py --verbose
+    # args=list(str)
     s = Singularity('image.sif', args=['--nv', '-v'], bind_paths='/foo/bar')
-    print(s._containerized_run_command('srun -n 16 myapp.py --verbose'))
+    print(s._containerized_run_command('srun -n 16'))
+    # singularity image.sif --nv -v --bind /foo/bar srun -n 16 myapp.py --verbose
 
+    #
+    # bind_paths types
+    #
 
+    # bind_paths:str
+    s = Singularity('image.sif', args='--nv', bind_paths='/foo/bar')
+    print(s._containerized_run_command('srun -n 16'))
+    # singularity image.sif --nv --bind /foo/bar srun -n 16 myapp.py --verbose
 
+    # bind_paths:list(str)
+    s = Singularity('image.sif', bind_paths=['/foo/bar', '/baz/'])
+    print(s._containerized_run_command('srun -n 16'))
+    # singularity image.sif  --bind /foo/bar,/baz/ srun -n 16 myapp.py --verbose
 
-
-
-
+    # bind_paths:dict(str,str)
+    s = Singularity('image.sif', bind_paths={'/foo/bar':'/foo/baz', '/a/b/c':'/usr/opt/c', '/baz/': None})
+    print(s._containerized_run_command('srun -n 16'))
+    # singularity image.sif  --bind /foo/bar=/foo/baz,/a/b/c=/usr/opt/c,/baz/ srun -n 16 myapp.py --verbose
 
