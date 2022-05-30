@@ -59,7 +59,7 @@ jobs:
 
       - name: singularity pull from ghcr
         if: contains( matrix.os, 'ubuntu' )
-        run: singularity pull ghcr.io/craylabs/redisai:1.2.5-cpu-bionic-custom
+        run: singularity pull https://ghcr.io/craylabs/redisai:1.2.5-cpu-bionic-custom
 
       - name: Install GNU make for MacOS and set GITHUB_PATH
         if: "contains( matrix.os, 'macos' )"
